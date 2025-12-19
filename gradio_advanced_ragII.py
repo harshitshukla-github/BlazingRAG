@@ -16,9 +16,9 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma, FAISS
 from langchain_groq import ChatGroq
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain.schema import Document
 
 # LCEL Core imports
+from langchain_core.documents import Document
 from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import (
@@ -68,35 +68,35 @@ class BlazingFastLCELRAG:
             self.llm_models = {
                 "OPENAI": ChatGroq(
                     model="openai/gpt-oss-120b",
-                    api_key=os.getenv("GROQ_API_KEY"),
+                    api_key=os.getenv("GROQ_API_KEY_VS"),
                     temperature=0.1,
                     max_tokens=1024,
                     streaming=True  # Enable streaming for speed
                 ),
                 "QWEN": ChatGroq(
                     model="qwen/qwen3-32b",
-                    api_key=os.getenv("GROQ_API_KEY"),
+                    api_key=os.getenv("GROQ_API_KEY_VS"),
                     temperature=0.1,
                     max_tokens=1024,
                     streaming=True
                 ),
                 "KIMI": ChatGroq(
                     model="moonshotai/kimi-k2-instruct-0905",
-                    api_key=os.getenv("GROQ_API_KEY"),
+                    api_key=os.getenv("GROQ_API_KEY_VS"),
                     temperature=0.1,
                     max_tokens=1024,
                     streaming=True
                 ),
                 "LLAMA": ChatGroq(
                     model="llama-3.3-70b-versatile",
-                    api_key=os.getenv("GROQ_API_KEY"),
+                    api_key=os.getenv("GROQ_API_KEY_VS"),
                     temperature=0.1,
                     max_tokens=1024,
                     streaming=True
                 ),
                 "GROQ": ChatGroq(
                     model="groq/compound",
-                    api_key=os.getenv("GROQ_API_KEY"),
+                    api_key=os.getenv("GROQ_API_KEY_VS"),
                     temperature=0.1,
                     max_tokens=1024,
                     streaming=True
