@@ -1,0 +1,59 @@
+# ⚡ BLAZING FAST RAG System - Requirements
+# Ultra-Fast Document RAG Assistant with LCEL
+# No version numbers - always use latest compatible versions
+
+# ===== Core LangChain Packages =====
+langchain
+langchain-core
+langchain-community
+langchain-groq
+langchain-huggingface
+langchain-openai
+langchain-text-splitters
+langchain-chroma
+
+# ===== Vector Stores =====
+chromadb
+faiss-cpu
+
+# ===== Embeddings & ML =====
+sentence-transformers
+huggingface-hub
+transformers
+torch
+
+# ===== Document Processing =====
+pypdf
+pymupdf
+python-docx
+openpyxl
+python-pptx
+
+# ===== Web Interfaces =====
+streamlit
+gradio
+
+# ===== Data Processing & Visualization =====
+pandas
+numpy
+plotly
+matplotlib
+
+# ===== API & Environment =====
+python-dotenv
+requests
+httpx
+
+# ===== Utilities =====
+pydantic
+typing-extensions
+tqdm
+
+# ===== Optional - Additional Features =====
+# Uncomment if needed:
+# arxiv
+# wikipedia
+# beautifulsoup4
+# google-generativeai
+# ipykernel
+# ipywidgets
